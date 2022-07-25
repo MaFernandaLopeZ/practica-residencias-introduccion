@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.container > *{
+    padding: 25px;
+    margin: 10px;
+    flex:1 100%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.header{
+    background-color: red;
+    height: 120px;
+}
+.parrafo{
+    text-align: left;
+    background-color: rgb(86, 199, 214);
+    height: 200px;
+}
+.aside1{
+    background-color: yellow;
+}
+.aside2{
+    background-color: palevioletred;
+}
+.footer{
+    background-color: rgb(49, 224, 49);
+}
+@media all and (min-width: 800px){
+    .parrafo{
+        flex: 3;
+        order: 2;
+    }
+    .aside1{
+        order: 1;
+    }
+    .aside2{
+        order: 2;
+    }
+    .footer{
+        order:4;
+    }
+}
+@media all and (min-width: 600px){
+    .aside{
+        flex: 1;
+    }
+}
