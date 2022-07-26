@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <form action="resultado.php" method="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form action="resultado.php" method="post">
         <label for="user">Usuario</label>
         <input type="text" name="user" id="user">
         <label for="pass">Contraseña</label>
