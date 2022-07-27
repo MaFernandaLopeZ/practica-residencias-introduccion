@@ -1,0 +1,1 @@
+$(".navbar").classList.replace("fixed-top", "fixed-bottom");
