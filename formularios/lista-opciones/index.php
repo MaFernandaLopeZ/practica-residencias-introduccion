@@ -13,7 +13,7 @@
         <input type="text" name="usuario" id="usuario" placeholder="Nombre del viajero">
         <label for="pasaje">Clase de pasaje</label>
         <select name="pasaje" id="pasaje">
-            <option value="0">VIP</option>
+            <option value="0">Vip</option>
             <option value="1">Especial</option>
             <option value="2">Primera</option>
             <option value="3">Segunda</option>
