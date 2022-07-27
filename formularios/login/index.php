@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <form action="resultado.php" method="post">
+    <form action="procesar.php" method="post">
         <label for="user">Usuario</label>
         <input type="text" name="user" id="user">
         <label for="pass">Contraseña</label>
