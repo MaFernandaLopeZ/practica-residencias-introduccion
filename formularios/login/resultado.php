@@ -12,10 +12,9 @@
         $user = $_POST["user"];
         $pass = $_POST["pass"];
 
-        // echo "<h4>DAtos recibidos por POST</h4>";
-    ?>
-        <h4>DAtos recibidos por POST</h4>
-        <p>nombre: <?php echo $user ?></p>
-        <p>contraseña: <?php echo $pass ?></p>        
+        echo "<h4>DAtos recibidos por POST</h4>";
+        echo "<p>nombre: $user </p>";
+        echo "<p>contraseña: $pass </p>";
+    ?>   
 </body>
 </html>
