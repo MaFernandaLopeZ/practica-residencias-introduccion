@@ -156,3 +156,337 @@ function testStrict(val) {
 }
 
 testStrict(10);
+
+// --------------------------------------------------
+// COMPARANDO DIFERENTES VALORES
+//La compareEqualityfunción en el editor compara dos valores usando el operador de igualdad. Modifique la función para que devuelva la cadena Equalsolo cuando los valores sean estrictamente iguales.
+function compareEquality(a, b) {
+    if (a === b) { // Change this line
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+compareEquality(10, "10");
+
+// --------------------------------------------------
+//OPERADOR DE DESIGUALDAD
+//Agregue el operador de desigualdad !=en la ifinstrucción para que la función devuelva la cadena Not Equalcuando valno sea equivalente a 99.
+function testNotEqual(val) {
+    if (val != 99) { // Change this line
+        return "Not Equal";
+    }
+    return "Equal";
+}
+
+testNotEqual(10);
+// --------------------------------------------------
+//OPERADOR DE DESIGUALDAD ESTRICTA
+//Agregue el operador de desigualdad estricta a la ifdeclaración para que la función devuelva la cadena Not Equalcuando valno sea estrictamente igual a 17
+function testStrictNotEqual(val) {
+    if (val !== 17) { // Change this line
+        return "Not Equal";
+    }
+    return "Equal";
+}
+
+testStrictNotEqual(10);
+// --------------------------------------------------
+//OPERADOR DE MAYOR QUE
+//Agregue el operador mayor que a las líneas indicadas para que las declaraciones de retorno tengan sentido.
+function testGreaterThan(val) {
+    if (val > 100) {  // Change this line
+        return "Over 100";
+    }
+
+    if (val > 10) {  // Change this line
+        return "Over 10";
+    }
+
+    return "10 or Under";
+}
+
+testGreaterThan(10);
+// --------------------------------------------------
+//OPERADOR DE MAYOR QUE O IGUAL
+//Agregue el operador mayor que o igual a las líneas indicadas para que las declaraciones de retorno tengan sentido.
+function testGreaterOrEqual(val) {
+    if (val >= 20) {  // Change this line
+        return "20 or Over";
+    }
+
+    if (val >= 10) {  // Change this line
+        return "10 or Over";
+    }
+
+    return "Less than 10";
+}
+
+testGreaterOrEqual(10);
+// --------------------------------------------------
+//OPERADOR DE MENOR QUE
+function testLessThan(val) {
+    if (val < 25) {  // Change this line
+        return "Under 25";
+    }
+
+    if (val < 55) {  // Change this line
+        return "Under 55";
+    }
+
+    return "55 or Over";
+}
+
+testLessThan(10);
+// --------------------------------------------------
+//OPERADOR DE MENOR QUE O IGUAL
+function testLessOrEqual(val) {
+    if (val <= 12) {  // Change this line
+        return "Smaller Than or Equal to 12";
+    }
+
+    if (val <= 24) {  // Change this line
+        return "Smaller Than or Equal to 24";
+    }
+
+    return "More Than 24";
+}
+
+testLessOrEqual(10);
+// --------------------------------------------------
+//OPERADOR DE &&
+function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25) {
+        return "Yes";
+    }
+    return "No";
+}
+
+testLogicalAnd(10);
+// --------------------------------------------------
+//OPERADOR DE ||
+function testLogicalOr(val) {
+    if (val < 10 || val > 20) {
+        return "Outside";
+    }
+    return "Inside";
+}
+
+testLogicalOr(15);
+// --------------------------------------------------
+//IF..else
+function testElse(val) {
+    let result = "";
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else {
+        result = "5 or Smaller";
+    }
+    return result;
+}
+
+testElse(4);
+// --------------------------------------------------
+//if..else if..else
+function testElseIf(val) {
+    if (val > 10) {
+        return "Greater than 10";
+    } else if (val < 5) {
+        return "Smaller than 5";
+    } else {
+        return "Between 5 and 10";
+    }
+}
+
+testElseIf(7);
+
+//***
+function orderMyLogic(val) {
+    if (val > 5 && val < 10) {
+        return "Less than 10";
+    } else if (val < 5) {
+        return "Less than 5";
+    } else {
+        return "Greater than or equal to 10";
+    }
+}
+
+orderMyLogic(7);
+
+//***
+function testSize(num) {
+    if (num < 5) {
+        return "Tiny";
+    } else if (num >= 5 && num < 10) {
+        return "Small";
+    } else if (num >= 10 && num < 15) {
+        return "Medium";
+    } else if (num >= 15 && num < 20) {
+        return "Large";
+    } else {
+        return "Huge";
+    }
+}
+
+testSize(7);
+// --------------------------------------------------
+//switch
+function caseInSwitch(val) {
+    let answer = "";
+    switch (val) {
+        case 1: answer = "alpha"; break;
+        case 2: answer = "beta"; break;
+        case 3: answer = "gamma"; break;
+        case 4: answer = "delta"; break;
+    }
+    return answer;
+}
+
+caseInSwitch(1);
+// --------------------------------------------------
+//switch con default
+function switchOfStuff(val) {
+    let answer = "";
+    switch (val) {
+        case "a": answer = "apple"; break;
+        case "b": answer = "bird"; break;
+        case "c": answer = "cat"; break;
+        default: answer = "stuff";
+    }
+    return answer;
+}
+
+switchOfStuff(1);
+// --------------------------------------------------
+//switch con rangos
+function sequentialSizes(val) {
+    let answer = "";
+    switch (val) {
+        case 1:
+        case 2:
+        case 3: answer = "Low"; break;
+        case 4:
+        case 5:
+        case 6: answer = "Mid"; break;
+        case 7:
+        case 8:
+        case 9: answer = "High"; break;
+    }
+    return answer;
+}
+
+sequentialSizes(1);
+// --------------------------------------------------
+function chainToSwitch(val) {
+    let answer = "";
+    switch (val) {
+        case "bob": answer = "Marley"; break;
+        case 42: answer = "The Answer"; break;
+        case 1: answer = "There is no #1"; break;
+        case 99: answer = "Missed me by this much!"; break;
+        case 7: answer = "Ate Nine"; break;
+    }
+
+    return answer;
+}
+
+chainToSwitch(7);
+// --------------------------------------------------
+// OBJETOS
+const myDog = {
+    name: "duque",
+    legs: 4,
+    tails: 4,
+    friends: ["Water", "Dogs"]
+};
+
+// LLER OBJETOS
+const testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+//***
+const testObj2 = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
+const entreeValue = testObj2["an entree"];
+const drinkValue = testObj["the drink"];
+//**
+const testObj3 = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+const playerNumber = 16;
+const player = testObj3[playerNumber];
+
+//Cambiar nombre a una propiedad del objeto
+const myDog2 = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+};
+
+const newName = "Happy Coder";
+//agregar una propiedad
+myDog2["name"] = newName;
+const myDog3 = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+};
+myDog3.bark = "guau";
+//eliminar una propiedad
+const myDog4 = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"],
+    "bark": "woof"
+};
+delete myDog4.tails;
+
+//funcion para buscar una propiedad en un objeto
+function phoneticLookup(val) {
+    let result = "";
+    result = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+    };
+    result = result[val];
+    return result;
+}
+
+phoneticLookup("charlie");
+
+//ver si existe una propiedad en un objeto
+//.hasOwnProperty(propname) --> método de objetos para determinar si ese objeto tiene el nombre de propiedad dado
+//.hasOwnProperty()devoluciones trueo falsesi la propiedad se encuentra o no.
+function checkObj(obj, checkProp) {
+    if (obj.hasOwnProperty(checkProp) == true) {
+        return obj[checkProp];
+    } else {
+        return "Not Found";
+    }
+}
+// --------------------------------------------------
+
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
